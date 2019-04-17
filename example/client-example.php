@@ -1,9 +1,9 @@
 <?php
 
-use KDuma\LPD\Client\Configuration;
 use KDuma\LPD\Client\DebugHandler\BasicDebugHandler;
 use KDuma\LPD\Client\Exceptions\InvalidJobException;
 use KDuma\LPD\Client\Exceptions\PrintErrorException;
+use KDuma\LPD\Client\Configuration;
 use KDuma\LPD\Client\Jobs\FileJob;
 use KDuma\LPD\Client\Jobs\TextJob;
 use KDuma\LPD\Client\PrintService;
@@ -21,7 +21,7 @@ $print_service->setDebugHandler($debug_handler);
 
 $jobs = [
     new TextJob("This is test!"),
-    new FileJob(__FILE__)
+    new FileJob(__FILE__),
 ];
 
 foreach ($jobs as $job) {
