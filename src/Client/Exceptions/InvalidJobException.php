@@ -1,4 +1,5 @@
 <?php
+
 namespace KDuma\LPD\Client\Exceptions;
 
 

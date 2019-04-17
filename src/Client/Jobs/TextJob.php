@@ -16,7 +16,7 @@ class TextJob implements JobInterface
      *
      * @param string $content
      */
-    public function __construct($content)
+    public function __construct($content = "")
     {
         $this->content = $content;
     }
@@ -31,18 +31,26 @@ class TextJob implements JobInterface
 
     /**
      * @param string $content
+     *
+     * @return TextJob
      */
-    public function setContent($content)
+    public function setContent($content): self
     {
         $this->content = $content;
+
+        return $this;
     }
 
     /**
      * @param string $content
+     *
+     * @return TextJob
      */
-    public function appdendContent($content)
+    public function appdendContent($content): self
     {
         $this->content .= $content;
+
+        return $this;
     }
 
     /**

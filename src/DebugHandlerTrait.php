@@ -18,10 +18,10 @@ trait DebugHandlerTrait
      *
      * @return self
      */
-    public function setDebugHandler($debug_handler): self 
+    public function setDebugHandler($debug_handler): self
     {
         $this->debug_handler = $debug_handler;
-        
+
         return $this;
     }
 

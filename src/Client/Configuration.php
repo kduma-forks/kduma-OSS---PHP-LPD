@@ -6,25 +6,25 @@ namespace KDuma\LPD\Client;
 
 class Configuration
 {
-    const LPD_DEFAULT_PORT = 515;
-    const ONE_MINUTE       = 60;
-    const DEFAULT_QUEUE_NAME         = 'default';
+    const LPD_DEFAULT_PORT   = 515;
+    const ONE_MINUTE         = 60;
+    const DEFAULT_QUEUE_NAME = 'default';
 
     /**
      * @var integer LPD Port
      */
     protected $port = self::LPD_DEFAULT_PORT;
-    
+
     /**
      * @var string LPD Address
      */
     protected $address;
-    
+
     /**
      * @var string LPD Queue Name
      */
     protected $queue = self::DEFAULT_QUEUE_NAME;
-    
+
     /**
      * @var string Timeout in seconds
      */

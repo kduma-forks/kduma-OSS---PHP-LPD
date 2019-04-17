@@ -13,7 +13,7 @@ interface JobInterface
 
     /**
      * @param string $error_message
-     * @param int $error_number
+     * @param int    $error_number
      *
      * @return bool
      */

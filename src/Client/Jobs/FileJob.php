@@ -20,7 +20,7 @@ class FileJob implements JobInterface
     {
         $this->file_name = $file_name;
     }
-    
+
     /**
      * @return string
      */
@@ -45,7 +45,7 @@ class FileJob implements JobInterface
     {
         $handler = $this->getFileHandler($debug);
 
-        while(!feof($handler)){
+        while (!feof($handler)) {
             fwrite($stream, fread($handler, 8192));
         }
 
@@ -64,7 +64,7 @@ class FileJob implements JobInterface
             //Force binary in Windows.
             return fopen($this->file_name, "rb");
         }
-        
+
         $debug("Operating system is not Windows");
         return fopen($this->file_name, "r");
     }
@@ -77,12 +77,12 @@ class FileJob implements JobInterface
      */
     public function isValid(&$error_message, &$error_number)
     {
-        if(is_readable($this->file_name))
+        if (is_readable($this->file_name))
             return true;
-        
+
         $error_message = "File is not readable!";
         $error_number = 404;
-        
+
         return false;
     }
 }

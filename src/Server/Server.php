@@ -1,6 +1,7 @@
 <?php
 
 namespace KDuma\LPD\Server;
+
 use Exception;
 use KDuma\LPD\DebugHandlerTrait;
 use KDuma\LPD\Server\Exceptions\SocketErrorException;
@@ -8,29 +9,29 @@ use KDuma\LPD\Server\Exceptions\SocketErrorException;
 class Server
 {
     const LPD_DEFAULT_PORT = 515;
-    
+
     use DebugHandlerTrait;
-    
+
     /**
      * @var resource|null
      */
     private $socket = null;
-    
+
     /**
      * @var null
      */
     private $handler = null;
-    
+
     /**
      * @var string
      */
     private $address = '127.0.0.1';
-    
+
     /**
      * @var int
      */
     private $port = self::LPD_DEFAULT_PORT;
-    
+
     /**
      * @var int
      */
@@ -102,7 +103,7 @@ class Server
         if (socket_listen($this->socket, $this->max_connections) === false) {
             throw new SocketErrorException('socket_listen() failed: reason: ' . socket_strerror(socket_last_error($this->socket)));
         }
-        
+
         do {
             if (($msgsock = socket_accept($this->socket)) === false) {
                 throw new SocketErrorException('socket_accept() failed: reason: ' . socket_strerror(socket_last_error($this->socket)));
