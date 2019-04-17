@@ -47,7 +47,6 @@ $job = new KDuma\LPD\Client\Jobs\FileJob("my_raw_file.txt");
 
 #### Print Service
 
-For printing files, text or binary, use `FileJob` class:
 ``` php
 $configuration = new KDuma\LPD\Client\Configuration($address, $queue_name, $port, $timeout);
 
