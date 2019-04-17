@@ -1,0 +1,20 @@
+{
+    "name": "kduma/lpd",
+    "description": "LPD Client for PHP",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Krystian Duma",
+            "email": "git@krystian.duma.sh"
+        }
+    ],
+    "require": {
+        "ext-sockets": "*",
+        "ext-mbstring": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "KDuma\\LPD\\": "src/"
+        }
+    }
+}
